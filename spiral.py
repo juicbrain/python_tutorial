@@ -1,13 +1,24 @@
-from turtle import *
-colors = ["red","cyan","green","yellow","pink","purple","yellow"]
-bgcgffrolor("black")
-speed(0)
-for x in range(200):
-    pencolor(colors[x%6])
-    width(x/100+1)
-    forward(x)
-    left(59)
+# importing turtle module
+import turtle
 
-hideturtle()
+# number of side
+sides = 5
 
-done()
+# size
+n = 7
+
+# creating instance of turtle
+pen = turtle.Turtle()
+
+# loop to draw a side
+for i in range(n * sides):
+    # drawing side of
+    # length i*10
+    pen.forward(i * 10)
+
+    # changing direction of pen
+    # by 360/sides degree in clockwise
+    pen.right(360 / sides)
+
+# closing the instance
+turtle.done()
